@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>College Timetable</title>
+  <style>
+    :root{
+      --border:#444;
+      --bg:#f7f7f7;
+      --accent:#524242;
+      --shade:#7a7a7a; 
+      --white:#fff;
+    }
+
+    body{
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      padding:20px;
+      background:var(--bg);
+      color:#111;
+    }
+
+    .timetable {
+      width:100%;
+      max-width:1100px;
+      margin:0 auto;
+      border-collapse:collapse;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      background:var(--white);
+    }
+
+    .timetable th,
+    .timetable td{
+      border:1px solid var(--border);
+      padding:8px;
+      text-align:center;
+      vertical-align:middle;
+      font-size:14px;
+    }
+
+    .timetable thead th{
+      background:#ececec;
+      font-weight:700;
+    }
+    .timetable th.day,
+    .timetable td.day { width:120px; text-align:left; padding-left:12px; font-weight:600; }
+    .timetable th.lunch,
+    .timetable td.lunch { width:40px; background:transparent; font-weight:700; }
+    .shaded {
+      background:var(--shade);
+      color: #fff;
+      font-weight:700;
+    }
+
+    .small {
+      font-size:12px;
+      line-height:1.1;
+    }
+    .lab {
+      font-size:12px;
+      font-style:italic;
+    }
+    @media (max-width:820px){
+      .timetable th, .timetable td { font-size:12px; padding:6px; }
+      .timetable th.day, .timetable td.day { width:90px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center">TIME TABLE (w.e.f. 23-06-2025)</h2>
+
+  <table class="timetable" role="table" aria-label="Weekly timetable">
+    <thead>
+      <tr>
+        <th class="day">Period / Day</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th class="lunch">L</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+      </tr>
+
+      <tr>
+        <th class="day">Time</th>
+        <th class="small">09.15<br>to<br>10.05</th>
+        <th class="small">10.20<br>to<br>11.10</th>
+        <th class="small">11.10<br>to<br>12.00</th>
+        <th class="small">12.00<br>to<br>12.50</th>
+        <th class="lunch small"> </th>
+        <th class="small">01.40<br>to<br>02.30</th>
+        <th class="small">02.30<br>to<br>03.20</th>
+        <th class="small">03.20<br>to<br>04.10</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="day">MON</td>
+        <td>WT</td>
+        <td>DAA</td>
+        <td>SR</td>
+        <td class="shaded">HON./LIB</td>
+        <td class="lunch"></td>
+        <td>NOSQL</td>
+        <td></td>
+        <td>EC/CC</td>
+      </tr>
+
+      <tr>
+        <td class="day">TUE</td>
+        <td>WT</td>
+        <td>SR</td>
+        <td>DAA</td>
+        <td>NOSQL</td>
+        <td class="lunch"></td>
+        <td colspan="2" class="lab small">Tinkering Lab ("B" Block GF - 13)</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td class="day">WED</td>
+        <td>MPSE</td>
+        <td>WT</td>
+        <td>DAA</td>
+        <td class="shaded">HON./LIB</td>
+        <td class="lunch"></td>
+        <td class="small lab">SR LAB ("B" Block -FF-01) (B1)<br>WT LAB ("B" Block -FF-01) (B2)</td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td class="day">THU</td>
+        <td>MPSE</td>
+        <td>WT</td>
+        <td>SR</td>
+        <td>NET</td>
+        <td class="lunch"></td>
+        <td colspan="3" class="lab small">Advanced Coding Lab – II ("G" Block)</td>
+      </tr>
+
+      <tr>
+        <td class="day">FRI</td>
+        <td>NOSQL</td>
+        <td colspan="2" class="small lab">
+          WT LAB ("B" Block-FF-01) (B1)<br>
+          SR LAB ("B" Block-FF-01) (B2)
+        </td>
+        <td></td>
+        <td class="lunch"></td>
+        <td>DAA</td>
+        <td>SPORTS</td>
+        <td class="shaded">HON./SPORTS</td>
+      </tr>
+
+      <tr>
+        <td class="day">SAT</td>
+        <td>SR</td>
+        <td>NOSQL</td>
+        <td>MPSE</td>
+        <td>COUNS.</td>
+        <td class="lunch"></td>
+        <td>MPSE</td>
+        <td>LIBRARY</td>
+        <td class="shaded">HON./SPORTS</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <p style="text-align:center; margin-top:10px; color:#666; font-size:13px;">
+   
+  </p>
+
+</body>
+</html>
